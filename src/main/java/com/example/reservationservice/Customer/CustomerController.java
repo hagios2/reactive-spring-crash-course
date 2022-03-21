@@ -1,6 +1,6 @@
 package com.example.reservationservice.Customer;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,10 +11,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/customers")
+@AllArgsConstructor
 public class CustomerController {
 
-    @Autowired
-    private CustomerService customerService;
+    private final CustomerService customerService;
 
     @GetMapping("/")
     public List<Customer>getAllCustomers() {

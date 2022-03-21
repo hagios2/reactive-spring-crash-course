@@ -1,16 +1,16 @@
 package com.example.reservationservice.Customer;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class CustomerService {
 
-    @Autowired
-    protected CustomerRepository customerRepository;
+    protected final CustomerRepository customerRepository;
 
     public List<Customer>loadAllCustomers(){
         long start = System.currentTimeMillis();

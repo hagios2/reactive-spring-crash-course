@@ -3,7 +3,6 @@ package com.example.reservationservice.Customer.Handlers;
 import com.example.reservationservice.Customer.Customer;
 import com.example.reservationservice.Customer.CustomerRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
