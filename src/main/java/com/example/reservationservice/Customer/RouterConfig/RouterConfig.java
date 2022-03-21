@@ -18,7 +18,9 @@ public class RouterConfig {
     public RouterFunction<ServerResponse> router(){
         return RouterFunctions
                 .route()
-                .GET("/api/customers", customerHandler::getCustomer)
+                .GET("/api/customers", customerHandler::getCustomers)
+                .GET("/api/get/{customerId}/customer", customerHandler::getCustomer)
+                .POST("/api/create/customer", customerHandler::createCustomer)
                 .build();
     }
 }
